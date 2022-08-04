@@ -1,0 +1,18 @@
+[
+    {
+      "label": "Pasta",
+      "id": 1
+    },
+    {
+      "label": "Meat",
+      "id": 2
+    },
+    {
+      "label": "Meals",
+      "id": 3
+    },
+    {
+      "label": "Vegans",
+      "id": 4
+    }
+  ]
