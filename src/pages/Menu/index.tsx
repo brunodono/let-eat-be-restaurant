@@ -1,4 +1,3 @@
-
 import styles from './Menu.module.scss';
 import { ReactComponent as Logo } from 'assets/logo.svg'
 import Search from './Search';
@@ -29,7 +28,7 @@ const Menu = () => {
                     <Filters filter={filter} setFilter={setFilter} />
                     <Sort sort={sort} setSort={setSort} />
                 </div>
-                <Itens />
+                <Itens search={search} filter={filter} sort={sort}  />
             </section>
         </main>
     )
