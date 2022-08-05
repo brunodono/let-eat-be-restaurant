@@ -5,7 +5,7 @@
       "photo": "/assets/dishes/southern_pasta.png",
       "size": 400,
       "serving": 2,
-      "price": 73.0,
+      "price": 13.0,
       "id": 1,
       "category": {
         "id": 1,
@@ -18,7 +18,7 @@
       "photo": "/assets/dishes/signature_pasta.png",
       "size": 400,
       "serving": 2,
-      "price": 54.0,
+      "price": 12.0,
       "id": 2,
       "category": {
         "id": 1,
@@ -31,7 +31,7 @@
       "photo": "/assets/dishes/chilli_pasta.png",
       "size": 350,
       "serving": 1,
-      "price": 58.0,
+      "price": 13.0,
       "id": 3,
       "category": {
         "id": 1,
@@ -44,7 +44,7 @@
       "photo": "/assets/dishes/signature_salad.png",
       "size": 450,
       "serving": 1,
-      "price": 42.0,
+      "price": 10.0,
       "id": 4,
       "category": {
         "id": 2,
@@ -53,11 +53,11 @@
     },
     {
       "title": "Steak with chips",
-      "description": "Beef steak (5.30 Oz) grilled, with chips. Sides:Rice and sauces.",
+      "description": "Beef steak (5.30 Oz.) grilled, with chips. Sides:Rice and sauces.",
       "photo": "/assets/dishes/steak_with_chips.png",
       "size": 550,
       "serving": 2,
-      "price": 86.0,
+      "price": 16.0,
       "id": 5,
       "category": {
         "id": 2,
@@ -66,11 +66,11 @@
     },
     {
       "title": "Rump steak chopped with vegetables and pasta",
-      "description": "14.10oz out of chopped rump steak, with grilled vegetables and client chosen pasta.",
+      "description": "14.10 Oz. out of chopped rump steak, with grilled vegetables and client chosen pasta.",
       "photo": "/assets/dishes/chopped_rump_steak.png",
       "size": 850,
       "serving": 3,
-      "price": 123.0,
+      "price": 18.0,
       "id": 6,
       "category": {
         "id": 3,
@@ -83,7 +83,7 @@
       "photo": "/assets/dishes/lasagna_vegan.png",
       "size": 350,
       "serving": 1,
-      "price": 45.0,
+      "price": 13.0,
       "id": 7,
       "category": {
         "id": 4,
@@ -96,7 +96,7 @@
       "photo": "/assets/dishes/salad_special.png",
       "size": 350,
       "serving": 1,
-      "price": 37.0,
+      "price": 11.0,
       "id": 8,
       "category": {
         "id": 4,
@@ -109,7 +109,7 @@
       "photo": "/assets/dishes/meatballs.png",
       "size": 740,
       "serving": 3,
-      "price": 120.0,
+      "price": 19.0,
       "id": 9,
       "category": {
         "id": 3,
