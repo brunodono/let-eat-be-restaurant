@@ -1,5 +1,5 @@
 import styles from './Menu.module.scss';
-import { ReactComponent as Logo } from 'assets/logo.svg'
+import { ReactComponent as Logo } from 'assets/logo.svg';
 import Search from './Search';
 import { useState } from 'react';
 import Filters from './Filters';
@@ -7,7 +7,7 @@ import Sort from './Sort';
 import Itens from './Itens';
 
 const Menu = () => {
-    const [search, setSearch] = useState("");
+    const [search, setSearch] = useState('');
     const [filter, setFilter] = useState<number | null>(null);
     const [sort, setSort] = useState('');
 
@@ -31,8 +31,8 @@ const Menu = () => {
                 <Itens search={search} filter={filter} sort={sort}  />
             </section>
         </main>
-    )
+    );
 
-}
+};
 
-export default Menu
+export default Menu;

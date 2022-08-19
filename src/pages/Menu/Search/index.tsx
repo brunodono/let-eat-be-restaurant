@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import styles from './Search.module.scss';
-import { CgSearch } from 'react-icons/cg'
+import { CgSearch } from 'react-icons/cg';
 
 interface Props {
     search: string,
@@ -9,15 +9,15 @@ interface Props {
 
 const Search = ({search, setSearch}: Props) => {
     return(
-<div className={styles.search}>
-    <input
-    value={search}
-    onChange={event => setSearch(event.target.value)}
-    placeholder="Search"
-    />
-    <CgSearch size={25} color="#4C4D5E" />
-</div>
-    )
-}
+        <div className={styles.search}>
+            <input
+                value={search}
+                onChange={event => setSearch(event.target.value)}
+                placeholder="Search"
+            />
+            <CgSearch size={25} color="#4C4D5E" />
+        </div>
+    );
+};
 
-export default Search
+export default Search;
