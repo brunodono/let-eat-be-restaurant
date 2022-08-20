@@ -22,7 +22,6 @@ const Nav = () => {
                         <Link to={rote.to}>
                             {rote.label}
                         </Link>
-
                     </li>
                 ))}
             </ul>
