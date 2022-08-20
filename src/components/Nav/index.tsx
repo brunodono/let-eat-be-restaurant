@@ -1,4 +1,5 @@
 import { ReactComponent as Logo } from 'assets/logo.svg';
+import { Link } from 'react-router-dom';
 import styles from './Nav.module.scss';
 
 const Nav = () => {
@@ -18,9 +19,9 @@ const Nav = () => {
             <ul className={styles.nav__list}>
                 {rotes.map((rote, index) => (
                     <li key={index} className={styles.nav__link}>
-                        <a href={rote.to}>
+                        <Link to={rote.to}>
                             {rote.label}
-                        </a>
+                        </Link>
 
                     </li>
                 ))}

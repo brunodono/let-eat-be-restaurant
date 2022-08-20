@@ -1,9 +1,5 @@
 @import 'styles/variables';
-.title {
-  color: $dark;
-  font-size: 3rem;
-  margin-bottom: 30px;
-}
+
 .recommendations {
   border-radius: 2px;
   display: flex;
@@ -36,7 +32,7 @@
     }
   }
 }
-.ourRestaurant {
+.ourPoint {
   margin-bottom: 100px;
   position: relative;
   width: 100%;
@@ -44,7 +40,7 @@
     border-radius: 5px;
     width: 100%;
   }
-  &__adress {
+  &__address {
     align-items: center;
     background-color: $dark;
     border-radius: 5px;

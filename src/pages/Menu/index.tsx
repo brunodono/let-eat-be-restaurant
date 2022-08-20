@@ -1,4 +1,5 @@
 import styles from './Menu.module.scss';
+import stylesTheme from 'styles/Theme.module.scss';
 import Search from './Search';
 import { useState } from 'react';
 import Filters from './Filters';
@@ -11,23 +12,15 @@ const Menu = () => {
     const [sort, setSort] = useState('');
 
     return (
-        <main>
-
-            <header className={styles.header}>
-                <div className={styles.header__text}>
-                    Let the pasta be your path
-                </div>
-            </header>
-            <section className={styles.menu}>
-                <h3 className={styles.menu__title}>Menu</h3>
-                <Search search={search} setSearch={setSearch} />
-                <div className={styles.menu__filters}>
-                    <Filters filter={filter} setFilter={setFilter} />
-                    <Sort sort={sort} setSort={setSort} />
-                </div>
-                <Itens search={search} filter={filter} sort={sort}  />
-            </section>
-        </main>
+        <section className={styles.menu}>
+            <h3 className={stylesTheme.title}>Menu</h3>
+            <Search search={search} setSearch={setSearch} />
+            <div className={styles.menu__filters}>
+                <Filters filter={filter} setFilter={setFilter} />
+                <Sort sort={sort} setSort={setSort} />
+            </div>
+            <Itens search={search} filter={filter} sort={sort} />
+        </section>
     );
 
 };
