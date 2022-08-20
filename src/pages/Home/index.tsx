@@ -1,7 +1,6 @@
 import menu from 'data/menu.json';
 import styles from './Home.module.scss';
 
-
 const Home = () => {
 
     let recommendedDishes = [...menu];

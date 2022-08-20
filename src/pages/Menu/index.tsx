@@ -1,5 +1,4 @@
 import styles from './Menu.module.scss';
-import { ReactComponent as Logo } from 'assets/logo.svg';
 import Search from './Search';
 import { useState } from 'react';
 import Filters from './Filters';
@@ -13,9 +12,7 @@ const Menu = () => {
 
     return (
         <main>
-            <nav className={styles.menu}>
-                <Logo />
-            </nav>
+
             <header className={styles.header}>
                 <div className={styles.header__text}>
                     Let the pasta be your path
