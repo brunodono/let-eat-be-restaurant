@@ -16,4 +16,8 @@
   color: $dark;
   font-size: 3rem;
   margin-bottom: 30px;
+  @media  (min-width: 0px) and (max-width: $desktop_md) {
+    font-size: 2rem;
+    text-align: center;
+  }
 }

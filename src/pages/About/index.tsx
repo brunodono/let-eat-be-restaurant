@@ -13,7 +13,10 @@ const About = () => {
                 About
             </h3>
             <div className={styles.aboutUs}>
-                <img src={house} alt='Let eat Be' />
+                <div className={styles.images__image}>
+                    <img src={house} alt='Let eat Be' />
+                </div>
+
                 <div className={styles.aboutUs__text}>
                     <p>
                         Our Let Eat Be restaurant offer you, our dear customers, the best yummy and enlightened Home Italian Pasta of Dublin!  We value the tradicional ingredients of Italian cookery, fresh, and of excellent quality in order to your experience be even more memorable!
@@ -25,8 +28,6 @@ const About = () => {
                         As sides to our italian pasta, Let Eat Be restaurant owns a special wine reservation, that perfectly matches with your dish, whether meat or pasta!
                     </p>
                 </div>
-
-
             </div>
 
             <div className={styles.images}>
@@ -35,11 +36,8 @@ const About = () => {
                         <img src={image} alt='pasta image' />
                     </div>
                 ))}
-
             </div>
-            
         </section>
-
     );
 };
 

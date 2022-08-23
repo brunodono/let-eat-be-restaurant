@@ -36,9 +36,11 @@
   margin-bottom: 100px;
   position: relative;
   width: 100%;
+  height: auto;
   img {
     border-radius: 5px;
     width: 100%;
+    height: auto;
   }
   &__address {
     align-items: center;
@@ -55,6 +57,8 @@
     margin: 0 auto;
     left: 0;
     right: 0;
+    padding: 1rem;
     width: 200px;
+    height: auto;
   }
 }

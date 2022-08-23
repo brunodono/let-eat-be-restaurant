@@ -3,6 +3,8 @@
     display: flex;
     gap: 20px;
     margin-bottom: 50px;
+    align-items: center;
+    
     &__text {
       display: flex;
       flex-direction: column;
@@ -14,17 +16,29 @@
         font-family: 'Josefin Sans', sans-serif;
       }
     }
+    @media (min-width: 100px) and (max-width: 800px) {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
   }
   .images {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 20px;
     justify-content: space-between;
+    align-items: center;
+
     &__image {
-      width: 600px;
+      width: 300vh;
+      height: auto;
+      max-width: 100%;
+      
+
       img {
         border-radius: 5px;
         width: 100%;
+        height: auto;
       }
     }
   }

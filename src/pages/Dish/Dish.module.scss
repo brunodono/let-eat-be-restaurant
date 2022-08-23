@@ -19,10 +19,12 @@
   font-size: 3rem;
 }
 .image {
-  width: 600px;
+  width: 50%;
+  height: auto;
   img {
     border-radius: 8px;
     width: 100%;
+    height: auto;
   }
 }
 .content {

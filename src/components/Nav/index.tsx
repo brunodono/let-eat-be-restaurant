@@ -4,18 +4,23 @@ import styles from './Nav.module.scss';
 
 const Nav = () => {
     const rotes = [{
-        label:'Home',
-        to:'/'
-    },{
-        label:'Menu',
-        to:'/menu'
-    },{
-        label:'About',
-        to:'/about'
+        label: 'Home',
+        to: '/'
+    }, {
+        label: 'Menu',
+        to: '/menu'
+    }, {
+        label: 'About',
+        to: '/about'
     }];
-    return (
-        <nav className={styles.nav}>
+    return (<>
+        <div className={styles.logoMobile}>
             <Logo />
+        </div>
+        <nav className={styles.nav}>
+            <div className={styles.logoDesktop}>
+                <Logo />
+            </div>
             <ul className={styles.nav__list}>
                 {rotes.map((rote, index) => (
                     <li key={index} className={styles.nav__link}>
@@ -25,8 +30,8 @@ const Nav = () => {
                     </li>
                 ))}
             </ul>
-
         </nav>
+    </>
     );
 };
 
