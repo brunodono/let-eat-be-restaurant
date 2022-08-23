@@ -5,18 +5,20 @@ import stylesTheme from 'styles/Theme.module.scss';
 import { useNavigate } from 'react-router-dom';
 
 const NotFound = () => {
-    const navigate = useNavigate() ;
+    const navigate = useNavigate();
     return (
         <div className={classNames({
             [styles.container]: true,
             [stylesTheme.container]: true
         })}>
             <div className={styles.back}>
-                <button onClick={()=>navigate(-1)}>
+                <button onClick={() => navigate(-1)}>
                     {'< Back '}
                 </button>
             </div>
-            <NotFoundImage />
+            <div className={styles.notFound}>
+                <NotFoundImage />
+            </div>
         </div>
 
     );
