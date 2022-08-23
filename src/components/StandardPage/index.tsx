@@ -1,8 +1,9 @@
 import styles from './StandardPage.module.scss';
 import stylesTheme from 'styles/Theme.module.scss';
 import { Outlet } from 'react-router-dom';
+import React from 'react';
 
-const StandardPage = () => {
+const StandardPage = ( { children }: { children?: React.ReactNode } ) => {
     return (
         <>
             <header className={styles.header}>
@@ -12,6 +13,7 @@ const StandardPage = () => {
             </header>
             <div className={stylesTheme.container}>
                 <Outlet />
+                {children}
             </div>
         </>
     );

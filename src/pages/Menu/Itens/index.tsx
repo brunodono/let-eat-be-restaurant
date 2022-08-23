@@ -3,6 +3,7 @@ import menu from 'data/menu.json';
 import Item from './Item';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { Menu } from 'types/dish';
 
 interface Props {
     search: string ;
@@ -24,7 +25,7 @@ const Itens = (props: Props) => {
         return true;
     };
 
-    const sorting = (newList: typeof menu) => {
+    const sorting = (newList: Menu) => {
         switch(sort) {
         case 'portion': return newList.sort((item1, item2) => item1.size > item2.size ? 1 : -1);
         case 'qt_people': return newList.sort((item1, item2) => item1.serving > item2.serving ? 1 : -1);

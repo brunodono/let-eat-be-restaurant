@@ -1,14 +1,20 @@
 import styles from './Dish.module.scss';
-import { useLocation } from 'react-router-dom';
-import classNames from 'classnames';
+import { useNavigate, useParams } from 'react-router-dom';
 import menu from 'data/menu.json';
+import DishTags from 'components/DishTags';
+import NotFound from 'pages/NotFound';
+import StandardPage from 'components/StandardPage';
 
 const Dish = () => {
-    const { state } = useLocation();
-    const { dish } = state as { dish: typeof menu[0]};
+    const { id } = useParams();
+    const navigate = useNavigate();
+    const dish = menu.find(item => item.id === Number(id));
+    if(!dish) {
+        return <NotFound />;
+    }
     return (
-        <>
-            <button className={styles.back}>
+        <StandardPage>
+            <button className={styles.back} onClick={()=>navigate(-1)}>
                 {'< Back'}
             </button>
             <section className={styles.container}>
@@ -22,27 +28,11 @@ const Dish = () => {
                     <p className={styles.content__description}>
                         {dish.description}
                     </p>
-                    <div className={styles.tags}>
-                        <div className={classNames({
-                            [styles.tags__type]: true,
-                            [styles[`tags__type__${dish.category.label.toLowerCase()}`]]: true
-                        })}>
-                            {dish.category.label}
-                        </div>
-                        <div className={styles.tags__portion}>
-                            {dish.size} g
-                        </div>
-                        <div className={styles.tags__qttpeople}>
-                            Serves {dish.serving} {dish.serving === 1 ? 'Person' : 'People'}
-                        </div>
-                        <div className={styles.tags__price}>
-                            €$ {dish.price.toFixed(2)}
-                        </div>
-                    </div>
+                    <DishTags {...dish} />
                 </div>
             </section>
 
-        </>
+        </ StandardPage>
     );
 };
 

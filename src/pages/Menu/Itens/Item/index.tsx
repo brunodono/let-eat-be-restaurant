@@ -1,13 +1,15 @@
 import styles from './Item.module.scss';
-import menu from 'data/menu.json';
-import classNames from 'classnames';
+import { Dish } from 'types/dish';
+import DishTags from 'components/DishTags';
+import { useNavigate } from 'react-router-dom';
 
-type Props = typeof menu[0] 
 
-const Item = (props:Props) => {
-    const { title, description, category, size, serving, price, photo  } = props;
+
+const Item = (props:Dish) => {
+    const { id, title, description, photo  } = props;
+    const navigate = useNavigate();
     return (
-        <div className={styles.item}>
+        <div className={styles.item} onClick={() => navigate(`/dish/${id}`) }>
             <div className={styles.item__image}>
                 <img src={photo} alt={title}  /> 
             </div>
@@ -16,23 +18,7 @@ const Item = (props:Props) => {
                     <h2> {title} </h2>
                     <p> {description}</p>
                 </div>
-                <div className={styles.item__tags}>
-                    <div className={classNames({
-                        [styles.item__type]: true,
-                        [styles[`item__type__${category.label.toLowerCase()}`]] : true
-                    }) }>
-                        {category.label}
-                    </div>
-                    <div className={styles.item__portion}>
-                        {size}g
-                    </div>
-                    <div className={styles.item__qtpeople}>
-                Serves {serving} {serving === 1 ? 'person' : 'people'}
-                    </div>
-                    <div className={styles.item__price}>
-                €$ {price.toFixed(2)}
-                    </div>
-                </div>
+                <DishTags {...props}/>                
             </div>
         </div>
     );

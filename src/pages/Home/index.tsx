@@ -3,6 +3,7 @@ import styles from './Home.module.scss';
 import stylesTheme from 'styles/Theme.module.scss';
 import ourPoint from 'assets/our_point.png';
 import { useNavigate } from 'react-router-dom';
+import { Dish } from 'types/dish';
 
 const Home = () => {
 
@@ -10,7 +11,7 @@ const Home = () => {
     recommendedDishes = recommendedDishes.sort(() => 0.5 - Math.random()).splice(0, 3);
     const navigate = useNavigate();
 
-    function redirectToDetails(dish: typeof menu[0]) {
+    function redirectToDetails(dish: Dish) {
         navigate(`/dish/${dish.id}`, { state: { dish }});
     }
 
